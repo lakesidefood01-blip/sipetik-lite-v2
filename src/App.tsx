@@ -21,6 +21,7 @@ const Pricing = lazy(() => import('@/src/pages/Pricing'));
 const Billing = lazy(() => import('@/src/pages/Billing'));
 const BillingSuccess = lazy(() => import('@/src/pages/BillingSuccess'));
 const BillingFailed = lazy(() => import('@/src/pages/BillingFailed'));
+const Report = lazy(() => import('@/src/pages/Report'));
 
 // Layout
 import AppLayout from '@/src/components/layout/AppLayout';
@@ -124,6 +125,7 @@ export default function App() {
               <Route path="/berat" element={<Berat />} />
               <Route path="/keuangan" element={<Keuangan />} />
               <Route path="/kesehatan" element={<Kesehatan />} />
+              <Route path="/report" element={<Report />} />
             </Route>
             
             <Route path="/billing" element={<Billing />} />

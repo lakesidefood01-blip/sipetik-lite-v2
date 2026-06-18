@@ -10,7 +10,8 @@ import {
   ReceiptText,
   LogOut,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  FileText
 } from 'lucide-react';
 import { useAppStore } from '@/src/store/useAppStore';
 import { cn } from '@/src/lib/utils';
@@ -24,6 +25,7 @@ const menuItems = [
   { icon: Scale, label: 'Timbang Sapi', path: '/berat' },
   { icon: Wallet, label: 'Keuangan', path: '/keuangan' },
   { icon: HeartPulse, label: 'Kesehatan', path: '/kesehatan' },
+  { icon: FileText, label: 'Laporan', path: '/report' },
   { icon: ReceiptText, label: 'Langganan', path: '/billing' },
   { icon: Settings, label: 'Settings', path: '/settings' },
 ];

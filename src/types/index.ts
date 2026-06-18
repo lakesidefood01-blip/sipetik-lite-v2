@@ -102,3 +102,18 @@ export type PerformerData = {
   weight: string;
   adgVal: number;
 };
+
+export type DashboardStats = {
+  totalSapi: number;
+  totalExpenses: number;
+  totalFeedCostThisMonth: number;
+  avgAdg: number;
+  activeReminders: number;
+};
+
+export type ChartsData = {
+  growth: GrowthDataPoint[];
+  feedWeekly: FeedWeeklyData[];
+  healthReminders: HealthReminderData[];
+  topPerformers: PerformerData[];
+};

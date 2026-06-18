@@ -31,7 +31,6 @@ import { formatCurrency, cn } from '@/src/lib/utils';
 import { Skeleton } from '@/src/components/ui/skeleton';
 import { canExportPdf } from '@/src/lib/subscription';
 import UpgradeModal from '@/src/components/UpgradeModal';
-import { toast } from 'sonner';
 import type { GrowthDataPoint, FeedWeeklyData, HealthReminderData, PerformerData, DashboardStats, ChartsData } from '@/src/types';
 import type { LucideIcon } from 'lucide-react';
 
@@ -40,7 +39,7 @@ export default function Dashboard() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
-  const displayName = profile?.full_name || user?.email?.split('@')[0] || 'User';
+  const displayName = profile?.full_name || user?.email?.split('@')?.[0] || 'User';
   const [stats, setStats] = useState<DashboardStats>({
     totalSapi: 0,
     totalExpenses: 0,

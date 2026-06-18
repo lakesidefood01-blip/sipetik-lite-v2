@@ -21,7 +21,7 @@ export default function Header() {
   const handleLogout = useLogout();
 
   // Pakai full_name dari profile, fallback ke email kalau belum diisi user
-  const displayName = profile?.full_name || user?.email?.split('@')[0] || 'User';
+  const displayName = profile?.full_name || user?.email?.split('@')?.[0] || 'User';
   const userInitial = (profile?.full_name?.[0] || user?.email?.[0] || 'U').toUpperCase();
 
   return (
@@ -68,7 +68,7 @@ export default function Header() {
               </Button>
             }
           />
-          <DropdownMenuContent className="w-56" align="end" forceMount>
+          <DropdownMenuContent className="w-56" align="end">
             <DropdownMenuLabel className="font-normal">
               <div className="flex flex-col space-y-1">
                 <p className="text-sm font-medium leading-none">{displayName}</p>

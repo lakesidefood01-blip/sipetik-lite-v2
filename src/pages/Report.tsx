@@ -9,11 +9,9 @@ import {
   Beef, 
   HeartPulse, 
   Scale,
-  Loader2,
-  FileText
+  Loader2
 } from 'lucide-react';
 import { toast } from 'sonner';
-import { formatCurrency } from '@/src/lib/utils';
 import {
   generateKeuanganPdf,
   generateSapiPdf,
@@ -59,7 +57,7 @@ export default function Report() {
   const { user, profile } = useAppStore();
   const [loadingType, setLoadingType] = useState<ReportType | null>(null);
 
-  const displayName = profile?.full_name || user?.email?.split('@')[0] || 'User';
+  const displayName = profile?.full_name || user?.email?.split('@')?.[0] || 'User';
 
   const handleGenerate = async (type: ReportType) => {
     if (!user) return;

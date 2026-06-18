@@ -58,16 +58,12 @@ export default function Header() {
         </div>
         <div className="hidden md:block">
         <DropdownMenu>
-          <DropdownMenuTrigger
-            render={
-              <Button variant="ghost" className="relative h-8 w-8 rounded-full">
-                <Avatar className="h-8 w-8 text-xs hover:opacity-80 transition-opacity">
-                  <AvatarImage src="" alt={displayName} />
-                  <AvatarFallback>{userInitial}</AvatarFallback>
-                </Avatar>
-              </Button>
-            }
-          />
+          <DropdownMenuTrigger className="relative h-8 w-8 rounded-full flex items-center justify-center">
+            <Avatar className="h-8 w-8 text-xs hover:opacity-80 transition-opacity">
+              <AvatarImage src="" alt={displayName} />
+              <AvatarFallback>{userInitial}</AvatarFallback>
+            </Avatar>
+          </DropdownMenuTrigger>
           <DropdownMenuContent className="w-56" align="end">
             <DropdownMenuLabel className="font-normal">
               <div className="flex flex-col space-y-1">

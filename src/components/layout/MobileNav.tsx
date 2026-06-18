@@ -4,7 +4,8 @@ import {
   Beef, 
   UtensilsCrossed, 
   Scale, 
-  Wallet
+  Wallet,
+  ReceiptText
 } from 'lucide-react';
 import { cn } from '@/src/lib/utils';
 
@@ -14,6 +15,7 @@ const mobileItems = [
   { icon: UtensilsCrossed, label: 'Pakan', path: '/pakan' },
   { icon: Scale, label: 'Berat', path: '/berat' },
   { icon: Wallet, label: 'Uang', path: '/keuangan' },
+  { icon: ReceiptText, label: 'Langganan', path: '/billing' },
 ];
 
 export default function MobileNav() {

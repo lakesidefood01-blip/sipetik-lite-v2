@@ -48,6 +48,15 @@ export default function Header() {
           <span className="absolute right-2 top-2 h-2 w-2 rounded-full bg-red-500"></span>
         </Button>
 
+        <div className="md:hidden">
+          <Button variant="ghost" className="relative h-8 w-8 rounded-full" onClick={() => navigate('/settings')}>
+            <Avatar className="h-8 w-8 text-xs hover:opacity-80 transition-opacity">
+              <AvatarImage src="" alt={displayName} />
+              <AvatarFallback>{userInitial}</AvatarFallback>
+            </Avatar>
+          </Button>
+        </div>
+        <div className="hidden md:block">
         <DropdownMenu>
           <DropdownMenuTrigger
             render={
@@ -86,6 +95,7 @@ export default function Header() {
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
+        </div>
       </div>
     </header>
   );
